@@ -1,9 +1,26 @@
-CREATE TABLE members(
-                        member_id INT PRIMARY KEY ,
-                        member_name Varchar(50) not null ,
-                        member_date date not null
+CREATE TABLE members
+(
+    member_id   INT PRIMARY KEY,
+    member_name Varchar(50) not null,
+    member_date date        not null
 );
-create TABLE books(
-                      book_id Int primary key ,
-                      title varchar(50)
+create TABLE books
+(
+    book_id Int primary key,
+    title   varchar(50),
+    author  varchar(50),
+    isbn    varchar(50) unique
+
 );
+
+create table lend
+(
+    lend_id     int primary key,
+    lend_date   date not null,
+    return_date date,
+    member_id   int  not null,
+    book_id     Int  not null,
+    foreign key (member_id) references members,
+    foreign key (book_id) references books
+
+)
