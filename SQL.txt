@@ -1,0 +1,9 @@
+CREATE TABLE members(
+                        member_id INT PRIMARY KEY ,
+                        member_name Varchar(50) not null ,
+                        member_date date not null
+);
+create TABLE books(
+                      book_id Int primary key ,
+                      title varchar(50)
+);
