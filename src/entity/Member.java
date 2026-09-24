@@ -7,11 +7,7 @@ public class Member {
     private Date memberDate;
 
 
-    public Member(int memberId, String memberName, Date memberDate) {
-        this.memberId = memberId;
-        this.memberName = memberName;
-        this.memberDate = memberDate;
-    }
+
 
     public int getMemberId() {
         return memberId;
@@ -37,5 +33,12 @@ public class Member {
         this.memberDate = memberDate;
     }
 
-
+    @Override
+    public String toString() {
+        return "Member{" +
+                "memberId=" + memberId +
+                ", memberName='" + memberName + '\'' +
+                ", memberDate=" + memberDate +
+                '}';
+    }
 }
