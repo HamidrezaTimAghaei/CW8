@@ -1,4 +1,6 @@
 package entity;
+
+import java.time.Instant;
 import java.util.Date;
 
 public class Member {
@@ -6,7 +8,20 @@ public class Member {
     private String memberName;
     private Date memberDate;
 
+    public Member() {
 
+    }
+
+    public Member(int memberId, String memberName) {
+        this.memberId = memberId;
+        this.memberName = memberName;
+        this.memberDate = Date.from(Instant.now());
+    }
+
+    public Member(String memberName, Date memberDate) {
+        this.memberName = memberName;
+        this.memberDate = memberDate;
+    }
 
 
     public int getMemberId() {
